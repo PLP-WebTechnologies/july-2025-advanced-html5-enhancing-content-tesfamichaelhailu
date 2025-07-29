@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Content & Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    header, main, footer {
+      max-width: 960px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #0056b3;
+    }
+
+    section {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    form input, form select, form textarea, form button {
+      width: 98%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    fieldset {
+      border: 1px solid #aaa;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 0.5rem;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    img, audio, video {
+      margin-top: 1rem;
+      max-width: 100%;
+    }
+
+    .checkbox-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        white-space: nowrap;
+      }
+      
+      input[type="checkbox"] {
+        transform: translateY(6px); /* checkbox adjust as needed */
+      }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced HTML5 Content & Mastering Forms</h1>
+    <p>This page demonstrates advanced HTML5 usage including lists, tables, media embedding, and a feature-rich form with accessibility and validation.</p>
+  </header>
+
+  <main>
+
+    <!-- Section 1: Lists -->
+    <section>
+      <h2>Popular Front-End Technologies</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+      </ul>
+      <h2>Popular Back-end Technologies</h2>
+      <ul>
+        <li>MySQL</li>
+        <li>Python</li>
+        <li>PHP</li>
+      </ul>
+
+      <h3>Steps to Build a Web Form</h3>
+      <ol>
+        <li>Start with the <code>&lt;form&gt;</code> element</li>
+        <li>Add input fields with proper <code>&lt;label&gt;</code></li>
+        <li>Use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> for grouping</li>
+        <li>Apply HTML5 validation attributes</li>
+        <li>Submit the form</li>
+      </ol>
+    </section>
+
+    <!-- Section 2: Table -->
+    <section>
+      <h2>Workshop Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Instructor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day 1</td>
+            <td>HTML5 & Semantic Elements</td>
+            <td>Tesfamichael Hailu</td>
+          </tr>
+          <tr>
+            <td>Day 2</td>
+            <td>CSS & Responsive Design</td>
+            <td>Sara Tadesse</td>
+          </tr>
+          <tr>
+            <td>Day 3</td>
+            <td>Forms & Validation</td>
+            <td>Bruck Agonafer</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 3: Media -->
+    <section>
+      <h2>Media Example</h2>
+      <p>Listen to this short clip:</p>
+      <audio controls autoplay>
+        <source src="audio.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <p>Sample tutorial image:</p>
+      <img src="web img.jpg" alt="what is web development">
+
+      <p>Introductory video:</p>
+      <video controls width="100%" autoplay muted loop>
+        <source src="vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Section 4: HTML5 Form -->
+    <section>
+      <h2>Registration Form</h2>
+      <form action="/submit" method="post" autocomplete="on" aria-label="User Registration Form">
+        
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g., Tesfamichael Hailu" required autocomplete="name">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="e.g., tesfamichaelhailu@gmail.com" required>
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+251926716804" required pattern="^\+?[0-9\s\-]{10,15}$">
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required minlength="4" maxlength="15" placeholder="4-15 characters">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6" placeholder="Minimum 6 characters">
+
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">-- Select --</option>
+            <option value="et">Ethiopia</option>
+            <option value="ke">Kenya</option>
+            <option value="ug">Uganda</option>
+          </select>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us a bit about yourself..." required></textarea>
+
+          <label for="referral">Referral Code (readonly):</label>
+          <input type="text" id="referral" name="referral" value="FORM2025" readonly>
+        </fieldset>
+
+        
+          
+        <label class="checkbox-label">
+            <input type="checkbox" name="terms" required>
+            I agree to the terms and conditions
+          </label>
+          
+          
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer style="align-items: center;">
+    <p>&copy; 2025 PLP Week 2 HTML5 Assignment – Tesfamichael Hailu</p>
+  </footer>
+
+</body>
+</html>
